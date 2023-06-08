@@ -1,0 +1,20 @@
+{
+  "name": "openapi-transformer-toolkit-ts-json-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:json-schema": "npx openapi-transformer-toolkit oas2json -i ./openapi.yml -o ./schemas",
+    "generate:ts-types": "npx openapi-transformer-toolkit oas2ts -i ./openapi.yml -o ./types",
+    "generate:ts-json-schemas": "node ./generate-ts-json-schemas.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^10.1.0",
+    "prettier": "^2.8.8",
+    "tiny-glob": "^0.2.9"
+  }
+}
